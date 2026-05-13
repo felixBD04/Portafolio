@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-label="n8n Automation Portfolio preview">
+  <defs>
+    <linearGradient id="n8nBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A0E1A"/>
+      <stop offset="1" stop-color="#0E1530"/>
+    </linearGradient>
+    <pattern id="n8nGrid" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#B026FF" stroke-width="0.3" opacity="0.15"/>
+    </pattern>
+    <radialGradient id="n8nGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#00F0FF" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#00F0FF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="560" height="360" fill="url(#n8nBg)"/>
+  <rect width="560" height="360" fill="url(#n8nGrid)"/>
+
+  <g fill="none" stroke-width="2">
+    <path d="M 105 110 C 145 110, 145 90, 185 90" stroke="#00F0FF" stroke-dasharray="4 3"/>
+    <path d="M 265 90 C 305 90, 305 180, 345 180" stroke="#B026FF" stroke-dasharray="4 3"/>
+    <path d="M 425 180 C 465 180, 465 270, 425 270" stroke="#00F0FF" stroke-dasharray="4 3"/>
+    <path d="M 225 110 C 225 180, 145 180, 145 250" stroke="#5DCAA5" stroke-dasharray="4 3"/>
+  </g>
+
+  <circle cx="385" cy="180" r="80" fill="url(#n8nGlow)"/>
+
+  <g transform="translate(40, 80)">
+    <rect width="65" height="60" rx="8" fill="#0A0E1A" stroke="#FF6D5A" stroke-width="2"/>
+    <path d="M 28 18 L 22 32 L 30 32 L 26 44 L 38 28 L 30 28 L 34 18 Z" fill="#FF6D5A"/>
+    <text x="32.5" y="55" fill="#FF6D5A" font-family="JetBrains Mono, monospace" font-size="7" font-weight="700" text-anchor="middle">WEBHOOK</text>
+  </g>
+
+  <g transform="translate(185, 60)">
+    <rect width="80" height="60" rx="8" fill="#0A0E1A" stroke="#00F0FF" stroke-width="2"/>
+    <g stroke="#00F0FF" stroke-width="1.8" fill="none">
+      <path d="M 25 18 L 25 30"/>
+      <path d="M 25 30 L 15 42"/>
+      <path d="M 25 30 L 35 42"/>
+      <circle cx="25" cy="18" r="3" fill="#00F0FF"/>
+      <circle cx="15" cy="42" r="3" fill="#00F0FF"/>
+      <circle cx="35" cy="42" r="3" fill="#00F0FF"/>
+    </g>
+    <text x="55" y="22" fill="#00F0FF" font-family="JetBrains Mono, monospace" font-size="8" font-weight="700">IF</text>
+    <text x="55" y="34" fill="#7A8AAE" font-family="JetBrains Mono, monospace" font-size="6">value &gt; 0</text>
+    <text x="55" y="44" fill="#7A8AAE" font-family="JetBrains Mono, monospace" font-size="6">type == 'ok'</text>
+    <text x="40" y="55" fill="#00F0FF" font-family="JetBrains Mono, monospace" font-size="7" font-weight="700" text-anchor="middle">FILTER</text>
+  </g>
+
+  <g transform="translate(345, 150)">
+    <rect width="80" height="60" rx="8" fill="#0A0E1A" stroke="#B026FF" stroke-width="2.5"/>
+    <g stroke="#B026FF" stroke-width="1.5" fill="none">
+      <circle cx="22" cy="22" r="11"/>
+      <ellipse cx="22" cy="22" rx="11" ry="5"/>
+      <line x1="11" y1="22" x2="33" y2="22"/>
+      <line x1="22" y1="11" x2="22" y2="33"/>
+    </g>
+    <text x="50" y="20" fill="#B026FF" font-family="JetBrains Mono, monospace" font-size="8" font-weight="700">GET</text>
+    <text x="50" y="32" fill="#7A8AAE" font-family="JetBrains Mono, monospace" font-size="6">/api/v1</text>
+    <text x="40" y="52" fill="#B026FF" font-family="JetBrains Mono, monospace" font-size="6.5" font-weight="700" text-anchor="middle">HTTP REQ</text>
+    <circle cx="73" cy="8" r="3" fill="#5DCAA5"/>
+    <circle cx="73" cy="8" r="3" fill="#5DCAA5" opacity="0.4">
+      <animate attributeName="r" values="3;7;3" dur="1.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="1.6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <g transform="translate(345, 245)">
+    <rect width="80" height="55" rx="8" fill="#0A0E1A" stroke="#00F0FF" stroke-width="2"/>
+    <g stroke="#00F0FF" stroke-width="1.5" fill="none">
+      <path d="M 14 28 L 28 14 L 32 18 L 18 32 L 12 32 Z" fill="#00F0FF" fill-opacity="0.15"/>
+      <path d="M 14 28 L 18 32"/>
+    </g>
+    <text x="42" y="22" fill="#00F0FF" font-family="JetBrains Mono, monospace" font-size="7">name:</text>
+    <text x="42" y="32" fill="#7A8AAE" font-family="JetBrains Mono, monospace" font-size="6">value</text>
+    <text x="40" y="48" fill="#00F0FF" font-family="JetBrains Mono, monospace" font-size="7" font-weight="700" text-anchor="middle">SET</text>
+  </g>
+
+  <g transform="translate(100, 230)">
+    <rect width="90" height="55" rx="8" fill="#0A0E1A" stroke="#5DCAA5" stroke-width="2"/>
+    <g transform="translate(10, 12)">
+      <rect width="26" height="30" rx="2" fill="none" stroke="#5DCAA5" stroke-width="1.5"/>
+      <line x1="0" y1="12" x2="26" y2="12" stroke="#5DCAA5" stroke-width="1"/>
+      <line x1="0" y1="22" x2="26" y2="22" stroke="#5DCAA5" stroke-width="1"/>
+      <line x1="13" y1="0" x2="13" y2="30" stroke="#5DCAA5" stroke-width="1"/>
+    </g>
+    <text x="45" y="22" fill="#5DCAA5" font-family="JetBrains Mono, monospace" font-size="8" font-weight="700">SHEETS</text>
+    <text x="45" y="34" fill="#7A8AAE" font-family="JetBrains Mono, monospace" font-size="6">append row</text>
+    <text x="45" y="48" fill="#5DCAA5" font-family="JetBrains Mono, monospace" font-size="6.5" font-weight="700">● Connected</text>
+  </g>
+
+  <g transform="translate(0, 0)">
+    <rect width="560" height="34" fill="#0A0E1A" opacity="0.9"/>
+    <line x1="0" y1="34" x2="560" y2="34" stroke="#B026FF" stroke-width="1" opacity="0.3"/>
+    <circle cx="16" cy="17" r="4" fill="#FF6D5A"/>
+    <circle cx="30" cy="17" r="4" fill="#FFB23F"/>
+    <circle cx="44" cy="17" r="4" fill="#5DCAA5"/>
+    <text x="280" y="21" fill="#7A8AAE" font-family="JetBrains Mono, monospace" font-size="10" text-anchor="middle">n8n · workflow-editor</text>
+    <text x="544" y="21" fill="#B026FF" font-family="JetBrains Mono, monospace" font-size="9" text-anchor="end" font-weight="700">// 002</text>
+  </g>
+
+  <g transform="translate(0, 326)">
+    <rect width="560" height="34" fill="#0A0E1A" opacity="0.95"/>
+    <line x1="0" y1="0" x2="560" y2="0" stroke="#B026FF" stroke-width="1" opacity="0.3"/>
+    <text x="16" y="22" fill="#7A8AAE" font-family="JetBrains Mono, monospace" font-size="9">3 niveles · 12+ workflows · webhooks · APIs</text>
+    <text x="544" y="22" fill="#5DCAA5" font-family="JetBrains Mono, monospace" font-size="9" text-anchor="end" font-weight="700">● Active</text>
+  </g>
+</svg>
