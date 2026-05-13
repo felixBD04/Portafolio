@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 280" role="img" aria-label="Avatar developer">
+  <defs>
+    <radialGradient id="avBg" cx="0.5" cy="0.45" r="0.5">
+      <stop offset="0" stop-color="#0E1530"/>
+      <stop offset="0.6" stop-color="#0A0E1A"/>
+      <stop offset="1" stop-color="#070912"/>
+    </radialGradient>
+    <linearGradient id="avHood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1E2A4A"/>
+      <stop offset="0.5" stop-color="#10182E"/>
+      <stop offset="1" stop-color="#0A0E1A"/>
+    </linearGradient>
+    <linearGradient id="avFace" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0A0E1A"/>
+      <stop offset="1" stop-color="#03050F"/>
+    </linearGradient>
+    <linearGradient id="avEye" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00F0FF"/>
+      <stop offset="1" stop-color="#B026FF"/>
+    </linearGradient>
+    <filter id="avGlow"><feGaussianBlur stdDeviation="2.2"/></filter>
+  </defs>
+
+  <circle cx="140" cy="140" r="138" fill="url(#avBg)" stroke="rgba(0,240,255,0.18)" stroke-width="1"/>
+
+  <ellipse cx="140" cy="160" rx="130" ry="40" fill="none" stroke="rgba(176,38,255,0.25)" stroke-width="1" stroke-dasharray="3 4" transform="rotate(-15 140 160)"/>
+
+  <g opacity="0.15" stroke="#00F0FF" stroke-width="0.4" fill="none">
+    <line x1="60" y1="20" x2="60" y2="260"/>
+    <line x1="220" y1="20" x2="220" y2="260"/>
+    <line x1="20" y1="80" x2="260" y2="80"/>
+    <line x1="20" y1="200" x2="260" y2="200"/>
+  </g>
+
+  <path d="M 50 280 Q 50 220 90 200 L 190 200 Q 230 220 230 280 Z"
+        fill="url(#avHood)" stroke="#00F0FF" stroke-width="0.8" stroke-opacity="0.4"/>
+
+  <rect x="125" y="180" width="30" height="28" rx="4" fill="#10182E"/>
+
+  <path d="M 90 140 Q 80 90 140 80 Q 200 90 190 140 L 190 175 Q 190 195 170 200 L 110 200 Q 90 195 90 175 Z"
+        fill="url(#avHood)" stroke="#00F0FF" stroke-width="0.8" stroke-opacity="0.5"/>
+
+  <ellipse cx="140" cy="145" rx="42" ry="50" fill="url(#avFace)"/>
+
+  <path d="M 99 145 Q 100 100 140 90 Q 180 100 181 145"
+        fill="none" stroke="#B026FF" stroke-width="1.5" opacity="0.8" filter="url(#avGlow)"/>
+
+  <g>
+    <ellipse cx="140" cy="148" rx="36" ry="6" fill="url(#avEye)" opacity="0.3" filter="url(#avGlow)"/>
+    <rect x="108" y="144" width="64" height="6" rx="3" fill="url(#avEye)"/>
+    <rect x="116" y="145" width="14" height="2" rx="1" fill="#FFF" opacity="0.5"/>
+    <rect x="148" y="145" width="10" height="2" rx="1" fill="#FFF" opacity="0.4"/>
+  </g>
+
+  <path d="M 100 200 Q 90 240 80 270" stroke="#1E2A4A" stroke-width="1.2" fill="none"/>
+  <path d="M 180 200 Q 190 240 200 270" stroke="#1E2A4A" stroke-width="1.2" fill="none"/>
+
+  <path d="M 132 200 L 130 218" stroke="#00F0FF" stroke-width="1.4" stroke-opacity="0.6"/>
+  <path d="M 148 200 L 150 218" stroke="#B026FF" stroke-width="1.4" stroke-opacity="0.6"/>
+  <circle cx="130" cy="220" r="2" fill="#00F0FF"/>
+  <circle cx="150" cy="220" r="2" fill="#B026FF"/>
+
+  <g font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">
+    <text x="34" y="60" fill="#00F0FF" opacity="0.5">{ }</text>
+    <text x="232" y="65" fill="#B026FF" opacity="0.5">&lt;/&gt;</text>
+    <text x="240" y="180" fill="#00F0FF" opacity="0.4">01</text>
+    <text x="22" y="195" fill="#B026FF" opacity="0.4">$_</text>
+    <text x="48" y="245" fill="#00F0FF" opacity="0.35">fn()</text>
+    <text x="220" y="250" fill="#B026FF" opacity="0.35">=&gt;</text>
+  </g>
+
+  <g transform="translate(112, 32)">
+    <rect width="56" height="14" rx="3" fill="rgba(10,14,26,0.9)" stroke="#5DCAA5" stroke-width="0.8"/>
+    <circle cx="8" cy="7" r="2.5" fill="#5DCAA5"/>
+    <circle cx="8" cy="7" r="2.5" fill="#5DCAA5" opacity="0.4">
+      <animate attributeName="r" values="2.5;5;2.5" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="16" y="10" fill="#5DCAA5" font-family="JetBrains Mono, monospace" font-size="7" font-weight="700">online</text>
+  </g>
+
+  <circle cx="140" cy="140" r="137" fill="none" stroke="#00F0FF" stroke-width="0.6" stroke-opacity="0.3"/>
+</svg>

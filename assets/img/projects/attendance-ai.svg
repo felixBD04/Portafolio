@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-label="Attendance AI System preview">
+  <defs>
+    <linearGradient id="aiBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A0E1A"/>
+      <stop offset="1" stop-color="#0E1530"/>
+    </linearGradient>
+    <linearGradient id="aiCyan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00F0FF"/>
+      <stop offset="1" stop-color="#00B8FF"/>
+    </linearGradient>
+    <linearGradient id="aiMagenta" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#B026FF"/>
+      <stop offset="1" stop-color="#8A1FCB"/>
+    </linearGradient>
+    <radialGradient id="aiBrainGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#B026FF" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#B026FF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="aiBlur"><feGaussianBlur stdDeviation="2"/></filter>
+    <pattern id="aiGrid" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#00F0FF" stroke-width="0.3" opacity="0.18"/>
+    </pattern>
+  </defs>
+
+  <rect width="560" height="360" fill="url(#aiBg)"/>
+  <rect width="560" height="360" fill="url(#aiGrid)"/>
+
+  <circle cx="280" cy="180" r="120" fill="url(#aiBrainGlow)"/>
+
+  <g transform="translate(45, 90)">
+    <rect width="100" height="120" rx="6" fill="#0A0E1A" stroke="#00F0FF" stroke-width="1.5"/>
+    <rect x="0" y="0" width="100" height="22" fill="#00F0FF" opacity="0.15"/>
+    <text x="8" y="15" fill="#00F0FF" font-family="JetBrains Mono, monospace" font-size="9" font-weight="700">JUSTIFY.PDF</text>
+    <rect x="10" y="34" width="70" height="3" rx="1" fill="#3A4A6E"/>
+    <rect x="10" y="44" width="80" height="3" rx="1" fill="#3A4A6E"/>
+    <rect x="10" y="54" width="55" height="3" rx="1" fill="#3A4A6E"/>
+    <rect x="10" y="68" width="80" height="3" rx="1" fill="#3A4A6E"/>
+    <rect x="10" y="78" width="65" height="3" rx="1" fill="#3A4A6E"/>
+    <rect x="10" y="88" width="75" height="3" rx="1" fill="#3A4A6E"/>
+    <rect x="10" y="102" width="40" height="3" rx="1" fill="#3A4A6E"/>
+    <text x="50" y="148" fill="#7A8AAE" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">INPUT</text>
+  </g>
+
+  <g stroke="#00F0FF" stroke-width="1.5" fill="none" stroke-dasharray="4 3">
+    <path d="M 150 150 L 215 150"/>
+  </g>
+  <polygon points="215,150 207,146 207,154" fill="#00F0FF"/>
+
+  <g transform="translate(280, 180)">
+    <polygon points="0,-58 50,-29 50,29 0,58 -50,29 -50,-29"
+             fill="none" stroke="url(#aiMagenta)" stroke-width="1.5" opacity="0.5"/>
+    <polygon points="0,-48 42,-24 42,24 0,48 -42,24 -42,-24"
+             fill="#0A0E1A" stroke="#B026FF" stroke-width="2"/>
+
+    <g stroke="#B026FF" stroke-width="1" fill="#B026FF">
+      <circle cx="-20" cy="-10" r="3"/>
+      <circle cx="20" cy="-15" r="3"/>
+      <circle cx="0" cy="0" r="4" fill="#00F0FF" stroke="#00F0FF"/>
+      <circle cx="-15" cy="15" r="3"/>
+      <circle cx="18" cy="12" r="3"/>
+      <circle cx="-25" cy="5" r="2.5"/>
+      <circle cx="25" cy="-2" r="2.5"/>
+    </g>
+    <g stroke="#B026FF" stroke-width="0.8" fill="none" opacity="0.7">
+      <line x1="-20" y1="-10" x2="0" y2="0"/>
+      <line x1="20" y1="-15" x2="0" y2="0"/>
+      <line x1="-15" y1="15" x2="0" y2="0"/>
+      <line x1="18" y1="12" x2="0" y2="0"/>
+      <line x1="-25" y1="5" x2="-15" y2="15"/>
+      <line x1="25" y1="-2" x2="20" y2="-15"/>
+      <line x1="-20" y1="-10" x2="-25" y2="5"/>
+      <line x1="18" y1="12" x2="25" y2="-2"/>
+    </g>
+
+    <rect x="-26" y="34" width="52" height="14" rx="3" fill="#B026FF"/>
+    <text x="0" y="44" fill="#FFF" font-family="JetBrains Mono, monospace" font-size="9" font-weight="700" text-anchor="middle">GEMINI</text>
+  </g>
+
+  <g stroke="#B026FF" stroke-width="1.5" fill="none" stroke-dasharray="4 3">
+    <path d="M 340 180 L 380 130"/>
+    <path d="M 340 180 L 380 230"/>
+  </g>
+  <polygon points="380,130 374,127 376,134" fill="#B026FF"/>
+  <polygon points="380,230 374,226 376,233" fill="#B026FF"/>
+
+  <g transform="translate(390, 100)">
+    <rect width="125" height="60" rx="6" fill="#0A0E1A" stroke="#5DCAA5" stroke-width="1.5"/>
+    <circle cx="20" cy="30" r="12" fill="#5DCAA5" opacity="0.2"/>
+    <path d="M 14 30 L 19 35 L 27 25" stroke="#5DCAA5" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="40" y="26" fill="#5DCAA5" font-family="JetBrains Mono, monospace" font-size="9" font-weight="700">APPROVED</text>
+    <text x="40" y="40" fill="#7A8AAE" font-family="JetBrains Mono, monospace" font-size="7">Sheet · Drive</text>
+  </g>
+
+  <g transform="translate(390, 205)">
+    <rect width="125" height="60" rx="6" fill="#0A0E1A" stroke="#00F0FF" stroke-width="1.5"/>
+    <g transform="translate(11, 21)">
+      <path d="M 0 8 L 18 0 L 14 18 L 8 12 L 0 8 Z" fill="#00F0FF"/>
+      <path d="M 8 12 L 14 6" stroke="#0A0E1A" stroke-width="1" fill="none"/>
+    </g>
+    <text x="40" y="26" fill="#00F0FF" font-family="JetBrains Mono, monospace" font-size="9" font-weight="700">TELEGRAM</text>
+    <text x="40" y="40" fill="#7A8AAE" font-family="JetBrains Mono, monospace" font-size="7">Alerta admin</text>
+  </g>
+
+  <g transform="translate(45, 305)">
+    <rect width="470" height="32" rx="4" fill="#0A0E1A" stroke="#1E2A4A" stroke-width="1"/>
+    <circle cx="14" cy="16" r="4" fill="#5DCAA5"/>
+    <circle cx="14" cy="16" r="4" fill="#5DCAA5" opacity="0.3">
+      <animate attributeName="r" values="4;9;4" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;0;0.5" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="30" y="20" fill="#FFF" font-family="JetBrains Mono, monospace" font-size="10">workflow.n8n</text>
+    <text x="160" y="20" fill="#7A8AAE" font-family="JetBrains Mono, monospace" font-size="9">·</text>
+    <text x="170" y="20" fill="#7A8AAE" font-family="JetBrains Mono, monospace" font-size="9">attendance-ai-system</text>
+    <text x="395" y="20" fill="#5DCAA5" font-family="JetBrains Mono, monospace" font-size="9" font-weight="700">● LIVE</text>
+  </g>
+
+  <text x="540" y="22" fill="#00F0FF" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="end" opacity="0.6">// 001</text>
+</svg>
