@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0A0E1A"/>
+      <stop offset="100%" stop-color="#14213D"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#00F0FF" stroke-opacity="0.08" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect x="80" y="80" width="280" height="40" fill="none" stroke="#E8ECF1" stroke-opacity="0.2"/>
+  <circle cx="100" cy="100" r="5" fill="#00FF94"/>
+  <text x="120" y="106" font-family="'JetBrains Mono', monospace" font-size="14" fill="#B8C0CC" letter-spacing="1">
+    DISPONIBLE · COLOMBIA
+  </text>
+  <text x="80" y="270" font-family="'Anton', sans-serif" font-size="120" font-weight="400" fill="#E8ECF1" letter-spacing="-2">
+    JUAN FÉLIX
+  </text>
+  <text x="80" y="390" font-family="'Anton', sans-serif" font-size="120" font-weight="400" fill="none" stroke="#00F0FF" stroke-width="2" letter-spacing="-2">
+    BALLESTEROS
+  </text>
+  <text x="80" y="470" font-family="'JetBrains Mono', monospace" font-size="28" fill="#B8C0CC">
+    <tspan fill="#00F0FF">&gt;</tspan> Backend &amp; automatización con <tspan fill="#00F0FF" font-weight="700">IA</tspan>
+  </text>
+  <line x1="80" y1="540" x2="1120" y2="540" stroke="#E8ECF1" stroke-opacity="0.1"/>
+  <text x="80" y="580" font-family="'JetBrains Mono', monospace" font-size="16" fill="#6B7689">
+    github.com/felixBD04
+  </text>
+  <text x="1120" y="580" font-family="'JetBrains Mono', monospace" font-size="16" fill="#B026FF" text-anchor="end">
+    PORTAFOLIO · v1.0
+  </text>
+</svg>
