@@ -7,56 +7,38 @@
   <meta name="description" content="Juan Félix Ballesteros — Backend & automatización con IA. Portafolio de un estudiante de desarrollo que construye herramientas web que resuelven problemas reales.">
   <meta name="author" content="Juan Félix Ballesteros">
   <meta name="keywords" content="portafolio, desarrollador, backend, IA, automatización, n8n, gemini, javascript, python, colombia">
-
-  <!-- Open Graph / redes sociales -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Juan Félix · Backend & automatización con IA">
   <meta property="og:description" content="Portafolio de Juan Félix Ballesteros — construyo herramientas que conectan frontend, IA y servicios cloud.">
   <meta property="og:image" content="./assets/img/og-image.svg">
-
   <title>Juan Félix · Backend & IA · Portafolio</title>
-
-  <!-- Favicon SVG (optimizado, escalable, sin peso) -->
   <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg">
-
-  <!-- Preconnect a Google Fonts para acelerar carga -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- Tipografías: Anton (display brutal), JetBrains Mono (mono), Manrope (body) -->
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@400;500;700&family=Manrope:wght@300;400;500;700;800&display=swap" rel="stylesheet">
-
-  <!-- Estilos -->
   <link rel="stylesheet" href="./assets/css/styles.css">
   <link rel="stylesheet" href="./assets/css/animations.css">
-
-  <!-- GSAP y ScrollTrigger (CDN) -->
+  <link rel="stylesheet" href="./assets/css/space.css">
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-
-  <!-- Scripts del proyecto -->
   <script defer src="./assets/js/i18n.js"></script>
   <script defer src="./assets/js/matrix.js"></script>
   <script defer src="./assets/js/cursor.js"></script>
   <script defer src="./assets/js/scramble.js"></script>
   <script defer src="./assets/js/easter-eggs.js"></script>
+  <script defer src="./assets/js/space-scene.js"></script>
   <script defer src="./assets/js/main.js"></script>
 </head>
 <body>
-
-  <!-- Canvas para el efecto Matrix rain de fondo -->
   <canvas id="matrix-canvas" aria-hidden="true"></canvas>
 
-  <!-- Cursor personalizado (oculto en touch) -->
   <div class="cursor" aria-hidden="true">
     <div class="cursor__dot"></div>
     <div class="cursor__ring"></div>
   </div>
 
-  <!-- Skip link para accesibilidad -->
   <a href="#main" class="skip-link">Saltar al contenido principal</a>
 
-  <!-- Loader inicial (se quita con JS) -->
   <div class="loader" id="loader" aria-hidden="true">
     <div class="loader__text">
       <span class="loader__line">[ INIT ]</span>
@@ -65,7 +47,6 @@
     </div>
   </div>
 
-  <!-- Header / Navegación -->
   <header class="header" id="header">
     <div class="header__inner">
       <a href="#hero" class="header__logo" aria-label="Inicio">
@@ -74,7 +55,6 @@
         <span class="header__logo-cursor">_</span>
         <span class="header__logo-bracket">}</span>
       </a>
-
       <nav class="nav" aria-label="Navegación principal">
         <ul class="nav__list">
           <li><a href="#about" class="nav__link" data-i18n="nav.about">Sobre mí</a></li>
@@ -83,20 +63,14 @@
           <li><a href="#contact" class="nav__link" data-i18n="nav.contact">Contacto</a></li>
         </ul>
       </nav>
-
       <div class="header__actions">
-        <!-- Toggle de idioma -->
         <button class="lang-toggle" id="lang-toggle" aria-label="Cambiar idioma">
           <span class="lang-toggle__option lang-toggle__option--active" data-lang="es">ES</span>
           <span class="lang-toggle__sep">/</span>
           <span class="lang-toggle__option" data-lang="en">EN</span>
         </button>
-
-        <!-- Botón menú móvil -->
         <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span></span><span></span><span></span>
         </button>
       </div>
     </div>
@@ -104,63 +78,77 @@
 
   <main id="main">
 
-    <!-- ===================== HERO ===================== -->
     <section class="hero" id="hero" aria-labelledby="hero-title">
       <div class="hero__grid"></div>
-
       <div class="hero__container">
-        <div class="hero__tag">
-          <span class="hero__tag-dot"></span>
-          <span data-i18n="hero.tag">Disponible para proyectos · Colombia</span>
-        </div>
 
-        <h1 class="hero__title" id="hero-title">
-          <span class="hero__title-line" data-scramble="Juan Félix">Juan Félix</span>
-          <span class="hero__title-line hero__title-line--outline" data-scramble="Ballesteros">Ballesteros</span>
-        </h1>
-
-        <p class="hero__subtitle">
-          <span class="hero__subtitle-prefix">&gt;</span>
-          <span data-i18n="hero.subtitle">Backend &amp; automatización con</span>
-          <span class="hero__subtitle-highlight" data-i18n="hero.highlight">Inteligencia Artificial</span>
-        </p>
-
-        <div class="hero__meta">
-          <div class="hero__meta-item">
-            <span class="hero__meta-key">role:</span>
-            <span class="hero__meta-value" data-i18n="hero.role">Estudiante de desarrollo</span>
+        <div class="hero__content">
+          <div class="hero__tag">
+            <span class="hero__tag-dot"></span>
+            <span data-i18n="hero.tag">Disponible para proyectos · Colombia</span>
           </div>
-          <div class="hero__meta-item">
-            <span class="hero__meta-key">campus:</span>
-            <span class="hero__meta-value">Campus Lands</span>
+
+          <h1 class="hero__title" id="hero-title">
+            <span class="hero__title-line" data-scramble="Juan Félix">Juan Félix</span>
+            <span class="hero__title-line hero__title-line--outline" data-scramble="Ballesteros">Ballesteros</span>
+          </h1>
+
+          <p class="hero__subtitle">
+            <span class="hero__subtitle-prefix">&gt;</span>
+            <span data-i18n="hero.subtitle">Backend &amp; automatización con</span>
+            <span class="hero__subtitle-highlight" data-i18n="hero.highlight">Inteligencia Artificial</span>
+          </p>
+
+          <div class="hero__meta">
+            <div class="hero__meta-item">
+              <span class="hero__meta-key">role:</span>
+              <span class="hero__meta-value" data-i18n="hero.role">Estudiante de desarrollo</span>
+            </div>
+            <div class="hero__meta-item">
+              <span class="hero__meta-key">campus:</span>
+              <span class="hero__meta-value">Campus Lands</span>
+            </div>
+            <div class="hero__meta-item">
+              <span class="hero__meta-key">focus:</span>
+              <span class="hero__meta-value">Backend · n8n · IA</span>
+            </div>
           </div>
-          <div class="hero__meta-item">
-            <span class="hero__meta-key">focus:</span>
-            <span class="hero__meta-value">Backend · n8n · IA</span>
+
+          <div class="hero__actions">
+            <a href="#projects" class="btn btn--primary">
+              <span data-i18n="hero.cta1">Ver proyectos</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn--ghost">
+              <span data-i18n="hero.cta2">Contáctame</span>
+            </a>
+          </div>
+
+          <div class="hero__scroll" aria-hidden="true">
+            <span class="hero__scroll-text" data-i18n="hero.scroll">SCROLL</span>
+            <div class="hero__scroll-line"></div>
           </div>
         </div>
 
-        <div class="hero__actions">
-          <a href="#projects" class="btn btn--primary">
-            <span data-i18n="hero.cta1">Ver proyectos</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
-              <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
-          </a>
-          <a href="#contact" class="btn btn--ghost">
-            <span data-i18n="hero.cta2">Contáctame</span>
-          </a>
+        <div class="hero__visual" aria-hidden="true">
+          <canvas id="space-canvas"></canvas>
+
+          <span class="hero__visual-label">
+            <span data-i18n="hero.system">SYSTEM ONLINE</span>
+          </span>
+
+          <div class="hero__visual-readout">
+            <span>lat: 02°55'N · lng: 75°17'W</span>
+            <span>uptime: <strong>∞</strong></span>
+            <span>status: <strong>building</strong></span>
+          </div>
         </div>
 
-        <!-- Scroll indicator -->
-        <div class="hero__scroll" aria-hidden="true">
-          <span class="hero__scroll-text" data-i18n="hero.scroll">SCROLL</span>
-          <div class="hero__scroll-line"></div>
-        </div>
       </div>
     </section>
 
-    <!-- ===================== ABOUT ===================== -->
     <section class="about" id="about" aria-labelledby="about-title">
       <div class="container">
         <div class="section-header">
@@ -170,6 +158,10 @@
 
         <div class="about__grid">
           <article class="about__bio">
+            <div class="about__avatar" aria-hidden="true">
+              <img src="./assets/img/avatar.svg" alt="" width="280" height="280">
+            </div>
+
             <p class="about__paragraph" data-i18n="about.p1">
               Construyo herramientas web que resuelven problemas reales — sistemas que conectan <strong>frontend, IA y servicios cloud</strong>. Me interesa más que un sistema funcione bien por dentro que cómo se vea por fuera, aunque cuido ambas cosas.
             </p>
@@ -203,14 +195,12 @@
       </div>
     </section>
 
-    <!-- ===================== STACK ===================== -->
     <section class="stack" id="stack" aria-labelledby="stack-title">
       <div class="container">
         <div class="section-header">
           <span class="section-header__num">// 02</span>
           <h2 class="section-header__title" id="stack-title" data-i18n="stack.title">Tech Stack</h2>
         </div>
-
         <div class="stack__grid">
           <article class="stack__card stack__card--lang">
             <header class="stack__card-header">
@@ -224,7 +214,6 @@
               <li class="stack__item" data-tech="css"><span class="stack__item-name">CSS3</span><span class="stack__item-bar"><span style="--lvl:85%"></span></span></li>
             </ul>
           </article>
-
           <article class="stack__card stack__card--ai">
             <header class="stack__card-header">
               <span class="stack__card-num">02</span>
@@ -237,7 +226,6 @@
               <li class="stack__item" data-tech="rest"><span class="stack__item-name">REST APIs</span><span class="stack__item-bar"><span style="--lvl:75%"></span></span></li>
             </ul>
           </article>
-
           <article class="stack__card stack__card--tools">
             <header class="stack__card-header">
               <span class="stack__card-num">03</span>
@@ -249,7 +237,6 @@
               <li class="stack__item" data-tech="vscode"><span class="stack__item-name">VS Code</span><span class="stack__item-bar"><span style="--lvl:90%"></span></span></li>
             </ul>
           </article>
-
           <article class="stack__card stack__card--learning">
             <header class="stack__card-header">
               <span class="stack__card-num">04</span>
@@ -265,7 +252,6 @@
       </div>
     </section>
 
-    <!-- ===================== PROYECTOS ===================== -->
     <section class="projects" id="projects" aria-labelledby="projects-title">
       <div class="container">
         <div class="section-header">
@@ -291,7 +277,10 @@
               </a>
             </div>
           </div>
-          <div class="project__visual" aria-hidden="true"><div class="project__visual-grid"></div><div class="project__visual-tag">AI / N8N</div></div>
+          <div class="project__visual">
+            <span class="project__visual-tag">AI / N8N</span>
+            <img class="project__preview" src="./assets/img/projects/attendance-ai.svg" alt="Diagrama del sistema Attendance AI: documento → Gemini → aprobación + Telegram" loading="lazy" width="560" height="360">
+          </div>
         </article>
 
         <article class="project project--reverse">
@@ -312,7 +301,10 @@
               </a>
             </div>
           </div>
-          <div class="project__visual" aria-hidden="true"><div class="project__visual-grid"></div><div class="project__visual-tag">WORKFLOWS</div></div>
+          <div class="project__visual">
+            <span class="project__visual-tag">WORKFLOWS</span>
+            <img class="project__preview" src="./assets/img/projects/n8n-automation.svg" alt="Editor de n8n mostrando nodos conectados: webhook, filter, http request, sheets, set" loading="lazy" width="560" height="360">
+          </div>
         </article>
 
         <article class="project">
@@ -333,7 +325,10 @@
               </a>
             </div>
           </div>
-          <div class="project__visual" aria-hidden="true"><div class="project__visual-grid"></div><div class="project__visual-tag">LMS</div></div>
+          <div class="project__visual">
+            <span class="project__visual-tag">LMS</span>
+            <img class="project__preview" src="./assets/img/projects/lms-platform.svg" alt="Dashboard del LMS: sidebar con menú, tarjetas de stats, tabla de cursos recientes" loading="lazy" width="560" height="360">
+          </div>
         </article>
 
         <div class="projects__more">
@@ -345,21 +340,18 @@
       </div>
     </section>
 
-    <!-- ===================== STATS ===================== -->
     <section class="stats" id="stats" aria-labelledby="stats-title">
       <div class="container">
         <div class="section-header">
           <span class="section-header__num">// 04</span>
           <h2 class="section-header__title" id="stats-title" data-i18n="stats.title">GitHub stats</h2>
         </div>
-
         <div class="stats__grid">
           <div class="stat-card"><span class="stat-card__num" data-count="16">0</span><span class="stat-card__label" data-i18n="stats.repos">Repositorios públicos</span></div>
           <div class="stat-card"><span class="stat-card__num" data-count="3">0</span><span class="stat-card__label" data-i18n="stats.featured">Proyectos destacados</span></div>
           <div class="stat-card"><span class="stat-card__num" data-count="4">0</span><span class="stat-card__label" data-i18n="stats.langs">Lenguajes principales</span></div>
           <div class="stat-card"><span class="stat-card__num" data-count="100" data-suffix="%">0</span><span class="stat-card__label" data-i18n="stats.coffee">Café en el sistema</span></div>
         </div>
-
         <div class="stats__images">
           <img src="https://github-readme-stats.vercel.app/api?username=felixBD04&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&rank_icon=github&cache_seconds=14400" alt="Estadísticas de GitHub de felixBD04" loading="lazy" class="stats__img">
           <img src="https://streak-stats.demolab.com?user=felixBD04&theme=tokyonight&hide_border=true&date_format=j%20M%5B%20Y%5D" alt="Racha de commits de felixBD04" loading="lazy" class="stats__img">
@@ -367,21 +359,17 @@
       </div>
     </section>
 
-    <!-- ===================== CONTACT ===================== -->
     <section class="contact" id="contact" aria-labelledby="contact-title">
       <div class="container">
         <div class="section-header">
           <span class="section-header__num">// 05</span>
           <h2 class="section-header__title" id="contact-title" data-i18n="contact.title">Hablemos</h2>
         </div>
-
         <div class="contact__main">
           <p class="contact__lead" data-i18n="contact.lead">
-            ¿Tienes un proyecto en mente, una idea loca, o solo quieres saludar?
-            <br>
+            ¿Tienes un proyecto en mente, una idea loca, o solo quieres saludar?<br>
             <strong data-i18n="contact.lead2">Me encuentras aquí abajo.</strong>
           </p>
-
           <ul class="contact__links" role="list">
             <li>
               <a href="https://github.com/felixBD04" target="_blank" rel="noopener noreferrer" class="contact-link">
@@ -411,7 +399,6 @@
 
   </main>
 
-  <!-- FOOTER -->
   <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer__inner">
