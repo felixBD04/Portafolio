@@ -1,11 +1,6 @@
 /* ============================================================
-   SPACE SCENE · v2 · Planeta tipo Tierra + Drag a rotar
+   SPACE SCENE · v3 · Planeta más grande, sin caja
    Canvas 2D puro · sin librerías · 0 dependencias
-   - Planeta con océanos azules, continentes simplificados, nubes y atmósfera
-   - Click + drag (o touch) para rotar manualmente el planeta
-   - Auto-rotación lenta cuando no se interactúa
-   - Órbitas con datos REALES de Felix (Backend, n8n, Gemini, @felixBD04...)
-   - Respeta prefers-reduced-motion
    ============================================================ */
 
 (function () {
@@ -25,7 +20,6 @@
     ocean: '#1A4F8B', oceanDp: '#0C2A4F'
   };
 
-  // Datos REALES de Felix orbitando
   const ORBITS = [
     { radius: 0.42, speed: 0.00040, tilt: 0.22, color: COLORS.cyan,
       labels: ['Backend', 'n8n', 'Gemini AI'], offset: 0 },
@@ -35,23 +29,17 @@
       labels: ['@felixBD04', 'Campus Lands', 'Colombia 🇨🇴'], offset: Math.PI / 1.4 }
   ];
 
-  // Continentes simplificados (lat, lng en grados)
   const CONTINENTS = [
-    // ÁFRICA + EUROPA
     [[[ 35,  -8], [ 55,   5], [ 60,  30], [ 45,  45], [ 30,  35],
       [ 12,  43], [  5,  40], [-15,  35], [-30,  20], [-35,  18],
       [-15,   0], [  5, -15], [ 18, -17], [ 30, -10]]],
-    // ASIA
     [[[ 70,  30], [ 75,  90], [ 65, 140], [ 55, 155], [ 35, 140],
       [ 25, 120], [ 10, 105], [ 20,  80], [ 30,  70], [ 40,  60],
       [ 50,  45], [ 60,  40]]],
-    // NORTEAMÉRICA
     [[[ 70,-160], [ 75,-100], [ 60, -70], [ 45, -60], [ 30, -85],
       [ 25,-105], [ 32,-115], [ 50,-125], [ 60,-145], [ 68,-155]]],
-    // SUDAMÉRICA
     [[[ 12, -72], [  5, -50], [-10, -38], [-25, -45], [-40, -60],
       [-55, -68], [-50, -75], [-30, -72], [-10, -78], [  5, -78]]],
-    // AUSTRALIA
     [[[-12, 130], [-15, 145], [-25, 153], [-37, 148], [-35, 138],
       [-32, 125], [-22, 115], [-15, 125]]]
   ];
@@ -163,7 +151,7 @@
   }
 
   function drawPlanet(t) {
-    const radius = 75 * scale;
+    const radius = 110 * scale;
     const px = cx + mouseTiltX * 5;
     const py = cy + mouseTiltY * 5;
 
@@ -191,7 +179,6 @@
     ctx.arc(px, py, radius, 0, Math.PI * 2);
     ctx.fill();
 
-    // Clip al disco
     ctx.save();
     ctx.beginPath();
     ctx.arc(px, py, radius, 0, Math.PI * 2);
@@ -250,7 +237,7 @@
       ctx.fill();
     });
 
-    // Terminator (sombra día/noche)
+    // Terminator
     const termGrad = ctx.createLinearGradient(
       px - radius, py - radius,
       px + radius * 0.4, py + radius * 0.4);
@@ -282,7 +269,7 @@
   }
 
   function drawOrbits(t) {
-    const planetR = 75 * scale;
+    const planetR = 110 * scale;
     const px = cx + mouseTiltX * 5;
     const py = cy + mouseTiltY * 5;
     ORBITS.forEach((orbit) => {
@@ -400,7 +387,7 @@
     if (!isDragging) return;
     const x = getPointerX(e);
     const dx = x - lastDragX;
-    const radius = 75 * scale;
+    const radius = 110 * scale;
     const deltaRot = dx / radius;
     targetRotY += deltaRot;
     dragVelocity = deltaRot * 0.5;

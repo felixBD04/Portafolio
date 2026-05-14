@@ -1,7 +1,5 @@
 /* ============================================================
-   SPACE & VISUALS · v2 · Escena espacial CENTRADA ARRIBA
-   El hero ya no es 2-columnas; ahora es 1-columna vertical:
-   ESCENA ARRIBA · CONTENIDO TEXTUAL DEBAJO
+   SPACE & VISUALS · v3 · Sin caja, planeta más grande
    ============================================================ */
 
 /* ============================================================
@@ -9,15 +7,14 @@
    ============================================================ */
 
 .hero {
-  /* Override del padding original — más compacto arriba ahora que la escena ocupa esa zona */
-  padding: 6rem 0 4rem !important;
+  padding: 3rem 0 1rem !important;
 }
 
 .hero__container {
   display: flex !important;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 0.5rem;
   grid-template-columns: none !important;
   text-align: center;
 }
@@ -26,14 +23,14 @@
 .hero__visual {
   position: relative;
   width: 100%;
-  max-width: 440px;
+  max-width: 480px;
   aspect-ratio: 1 / 1;
   margin: 0 auto;
-  order: 0; /* primera en el flujo */
+  order: 0;
   cursor: grab;
   user-select: none;
   -webkit-user-select: none;
-  touch-action: none; /* para que el drag funcione en touch */
+  touch-action: none;
 }
 
 .hero__visual.is-dragging {
@@ -42,7 +39,7 @@
 
 @media (min-width: 900px) {
   .hero__visual {
-    max-width: 480px;
+    max-width: 520px;
   }
 }
 
@@ -59,37 +56,9 @@
   height: 100%;
   display: block;
   z-index: 1;
-  border-radius: 4px;
 }
 
-/* Esquinas brutalist decorativas */
-.hero__visual::before,
-.hero__visual::after {
-  content: "";
-  position: absolute;
-  width: 26px;
-  height: 26px;
-  border: 2px solid var(--color-cyan, #00F0FF);
-  pointer-events: none;
-  z-index: 2;
-}
-
-.hero__visual::before {
-  top: -4px;
-  left: -4px;
-  border-right: none;
-  border-bottom: none;
-}
-
-.hero__visual::after {
-  bottom: -4px;
-  right: -4px;
-  border-left: none;
-  border-top: none;
-  border-color: var(--color-magenta, #B026FF);
-}
-
-/* Etiqueta superior: ahora dice "DRAG TO ROTATE" */
+/* Etiqueta superior */
 .hero__visual-label {
   position: absolute;
   top: 12px;
@@ -166,10 +135,9 @@
   .hero__visual-label { font-size: 8px; padding: 4px 8px; }
 }
 
-/* Esconder scroll indicator del hero porque ahora está dentro de un layout vertical */
 .hero__scroll {
   position: relative !important;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   right: auto !important;
   bottom: auto !important;
 }
@@ -179,7 +147,7 @@
 }
 
 /* ============================================================
-   PROJECT PREVIEWS · imágenes reales (JPG embebido)
+   PROJECT PREVIEWS
    ============================================================ */
 
 .project__visual {
@@ -296,12 +264,6 @@
 
 /* ============================================================
    FIX KONAMI · v2
-   Bug original: el `filter: hue-rotate` aplicado al body afectaba
-   a TODOS los hijos, incluido .cursor. Sumado a `mix-blend-mode:
-   difference` con --cyan cambiado a magenta, el cursor terminaba
-   invisible/mimetizado con el fondo.
-   Fix: aplicar la animación SOLO a main/header/footer/matrix-canvas
-   (no al body entero) y forzar el cursor a colores siempre visibles.
    ============================================================ */
 body.konami-mode {
   animation: none !important;

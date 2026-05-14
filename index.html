@@ -82,6 +82,20 @@
       <div class="hero__grid"></div>
       <div class="hero__container">
 
+        <div class="hero__visual" aria-hidden="true">
+          <canvas id="space-canvas"></canvas>
+
+          <span class="hero__visual-label">
+            <span data-i18n="hero.system">SYSTEM ONLINE</span>
+          </span>
+
+          <div class="hero__visual-readout">
+            <span>lat: 02°55'N · lng: 75°17'W</span>
+            <span>uptime: <strong>∞</strong></span>
+            <span>status: <strong>building</strong></span>
+          </div>
+        </div>
+
         <div class="hero__content">
           <div class="hero__tag">
             <span class="hero__tag-dot"></span>
@@ -129,20 +143,6 @@
           <div class="hero__scroll" aria-hidden="true">
             <span class="hero__scroll-text" data-i18n="hero.scroll">SCROLL</span>
             <div class="hero__scroll-line"></div>
-          </div>
-        </div>
-
-        <div class="hero__visual" aria-hidden="true">
-          <canvas id="space-canvas"></canvas>
-
-          <span class="hero__visual-label">
-            <span data-i18n="hero.system">SYSTEM ONLINE</span>
-          </span>
-
-          <div class="hero__visual-readout">
-            <span>lat: 02°55'N · lng: 75°17'W</span>
-            <span>uptime: <strong>∞</strong></span>
-            <span>status: <strong>building</strong></span>
           </div>
         </div>
 
@@ -279,7 +279,7 @@
           </div>
           <div class="project__visual">
             <span class="project__visual-tag">AI / N8N</span>
-            <img class="project__preview" src="./assets/img/projects/attendance-ai.svg" alt="Diagrama del sistema Attendance AI: documento → Gemini → aprobación + Telegram" loading="lazy" width="560" height="360">
+            <img class="project__preview" src="./assets/img/projects/attendance-ai.svg" alt="Diagrama del sistema Attendance AI" loading="lazy" width="560" height="360">
           </div>
         </article>
 
@@ -303,7 +303,7 @@
           </div>
           <div class="project__visual">
             <span class="project__visual-tag">WORKFLOWS</span>
-            <img class="project__preview" src="./assets/img/projects/n8n-automation.svg" alt="Editor de n8n mostrando nodos conectados: webhook, filter, http request, sheets, set" loading="lazy" width="560" height="360">
+            <img class="project__preview" src="./assets/img/projects/n8n-automation.svg" alt="Editor de n8n mostrando nodos conectados" loading="lazy" width="560" height="360">
           </div>
         </article>
 
@@ -327,7 +327,7 @@
           </div>
           <div class="project__visual">
             <span class="project__visual-tag">LMS</span>
-            <img class="project__preview" src="./assets/img/projects/lms-platform.svg" alt="Dashboard del LMS: sidebar con menú, tarjetas de stats, tabla de cursos recientes" loading="lazy" width="560" height="360">
+            <img class="project__preview" src="./assets/img/projects/lms-platform.svg" alt="Dashboard del LMS" loading="lazy" width="560" height="360">
           </div>
         </article>
 
@@ -386,7 +386,7 @@
               </a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/" target="_blank" rel="noopener noreferrer" class="contact-link" data-contact="linkedin">
+              <a href="https://www.linkedin.com/in/juan-felix-ballesteros-diaz-289300305/" target="_blank" rel="noopener noreferrer" class="contact-link" data-contact="linkedin">
                 <span class="contact-link__platform">LinkedIn</span>
                 <span class="contact-link__handle" data-i18n="contact.linkedinHandle">Conectemos profesionalmente</span>
                 <svg class="contact-link__arrow" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>
